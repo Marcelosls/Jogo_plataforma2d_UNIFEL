@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-public class DBMng : MonoBehaviour
+public static class DBMng
 {
-    // Start is called before the first frame update
-    void Start()
+    private const string LEVEL_DATA = "level_data-";
+    private const string HABILITA_LEVEL = "habilita_level-";
+    private const string MEDALHA_LEVEL = "medalha_level-";
+    private const string VOLUME = "volume";
+    
+    public static int BuscarQtdItensColetaveisLevel(int idLevel)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return PlayerPrefs.GetInt(LEVEL_DATA + idLevel);
     }
 }
